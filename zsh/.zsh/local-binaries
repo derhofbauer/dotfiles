@@ -1,0 +1,9 @@
+# add locally installed binaries to the $PATH
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
+
+# yarn global binaries
+if [ -d "$HOME/.yarn/bin" ]; then
+  PATH="$PATH:$HOME/.yarn/bin"
+fi

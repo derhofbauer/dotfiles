@@ -1,0 +1,32 @@
+alias terminal="open -a Terminal ."
+alias gt="terminal"
+alias gta="alacritty --working-directory=$(pwd) &"
+
+alias dbw='watch dropbox-cli status'
+alias dbs='dropbox-cli status'
+alias dls='dropbox-cli ls'
+
+alias fucking='sudo '
+alias domd5sum='md5sum * | tee checksum.md5'
+alias domd5sumr='find . -type f -exec md5sum '{}' \; | tee checksum.md5'
+alias checkmd5sum='md5sum -c checksum.md5 '
+
+alias load-ssh-agent='eval $(ssh-agent -s) && ssh-add ~/.ssh/hofbauer_wibs_rsa'
+
+alias yt-dlp-audio='yt-dlp --extract-audio --audio-format=vorbis '
+
+
+alias z='zoxide'
+alias ls='lsd'
+alias lso='ls'
+
+alias gitf='git-flow'
+
+# Start new tmux session with current folder name
+alias tn='tmux new -s ${PWD##*/}'
+alias ta='tmux attach $(tmux list-sessions | fzf)'
+
+alias s='sesh connect "$(sesh list -tc | fzf)"'
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
+alias lgit='lazygit'

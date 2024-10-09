@@ -1,0 +1,5 @@
+# zoxide setup
+if command -v z &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
