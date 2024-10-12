@@ -15,7 +15,6 @@ alias load-ssh-agent='eval $(ssh-agent -s) && ssh-add ~/.ssh/hofbauer_wibs_rsa'
 
 alias yt-dlp-audio='yt-dlp --extract-audio --audio-format=vorbis '
 
-
 alias z='zoxide'
 alias ls='lsd'
 alias lso='ls'

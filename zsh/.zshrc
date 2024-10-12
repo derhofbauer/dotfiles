@@ -1,6 +1,6 @@
 # Profile ZSH startup
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
-  zmodload zsh/zprof 
+  zmodload zsh/zprof
 fi
 
 
@@ -39,7 +39,6 @@ source ~/.zsh/ngrok
 source ~/.zsh/zoxide
 source ~/.zsh/starship
 source ~/.zsh/thefuck
-source ~/.zsh/jetbrains-toolbox
 #source ~/.zsh/miniconda
 
 # do not remove the trailing slash on path
