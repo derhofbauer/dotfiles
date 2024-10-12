@@ -11,3 +11,5 @@ I keep my dotfiles repo in ~/repos/dotfiles, so we need to adapt the paths when 
 ```bash
 stow -d ~/repos/dotfiles/ -t ~ -R <package>
 ```
+
+Alternatively I provided a `.stowrc` file for convenience, which allows me to run `stow -R <package>` inside of the repository folder.
