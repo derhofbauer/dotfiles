@@ -39,6 +39,7 @@ source ~/.zsh/ngrok
 source ~/.zsh/zoxide
 source ~/.zsh/starship
 source ~/.zsh/thefuck
+source ~/.zsh/asdf
 #source ~/.zsh/miniconda
 
 # do not remove the trailing slash on path
