@@ -1,2 +1,4 @@
 # fzf completions
-eval "$(fzf --zsh)"
+if [ -e /opt/homebrew/bin/fzf ]; then
+  source <(fzf --zsh)
+fi
