@@ -29,3 +29,6 @@ alias s='sesh connect "$(sesh list -tc | fzf)"'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 alias lgit='lazygit'
+
+# fzf manpage
+alias fman='compgen -c | fzf | xargs man'
