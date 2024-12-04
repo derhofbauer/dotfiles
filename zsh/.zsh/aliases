@@ -1,6 +1,7 @@
 alias terminal="open -a Terminal ."
 alias gt="terminal"
 alias gta="alacritty --working-directory=$(pwd) &"
+alias gtk="kitty --working-directory=$(pwd) &"
 
 alias dbw='watch dropbox-cli status'
 alias dbs='dropbox-cli status'
