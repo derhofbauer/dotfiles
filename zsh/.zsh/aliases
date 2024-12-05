@@ -33,3 +33,6 @@ alias lgit='lazygit'
 
 # fzf manpage
 alias fman='compgen -c | fzf | xargs man'
+
+# move all files recursively
+alias rmv='find . -type f -exec mv {} . \;'
