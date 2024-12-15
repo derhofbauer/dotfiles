@@ -15,4 +15,3 @@ return {
     require("auto-dark-mode").init()
   end,
 }
-
