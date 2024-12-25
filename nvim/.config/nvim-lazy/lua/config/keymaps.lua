@@ -18,3 +18,8 @@ end, { desc = "Lazygit (root dir)" })
 
 -- gen.nvim
 vim.keymap.set("n", "<leader>G", ":Gen<CR>")
+
+-- Exceute current file
+vim.kepyma.set("n", "<space>x", ":.lua<CR>")
+-- Exceutre selection
+vim.keymap.set("v", "<space>x", ":lua<CR>")
