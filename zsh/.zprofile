@@ -5,3 +5,6 @@ fi
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/alexander/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Add global composer-installed binaries
+export PATH="$PATH:$HOME/.composer/vendor/bin";
