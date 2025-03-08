@@ -13,6 +13,11 @@ return {
     { "<leader>lm", ":Laravel related<cr>" },
   },
   event = { "VeryLazy" },
-  opts = {},
+  opts = {
+    pickers = {
+      enable = true,
+      provider = "telescope",
+    },
+  },
   config = true,
 }
