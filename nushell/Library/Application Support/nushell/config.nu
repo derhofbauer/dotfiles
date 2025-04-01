@@ -35,3 +35,14 @@ export def filter-time-csv [
 
     print $"Processed CSV saved to ($out_file)"
 }
+
+export def filter-time-csv-overwrite [
+  file: string # Input/Output CSV file
+] {
+    open $file
+    | reject User Email Client Task Billable Tags
+    | to csv
+    | save --force $file
+
+    print $"Processed CSV saved to ($file)"
+  }
