@@ -7,7 +7,6 @@ return {
       "beautysh",
       "blade-formatter",
       "buf",
-      "buf-language-server",
       "cmake-language-server",
       "cmakelang",
       "css-lsp",
