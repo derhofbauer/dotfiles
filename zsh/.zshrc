@@ -8,6 +8,7 @@ fi
 source ~/.zplug/init.zsh
 
 # load custom config files
+source ~/.zsh/history
 source ~/.zsh/manjaro
 source ~/.zsh/homebrew
 source ~/.zsh/go
@@ -40,7 +41,7 @@ source ~/.zsh/zoxide
 source ~/.zsh/starship
 source ~/.zsh/thefuck
 source ~/.zsh/asdf
-#source ~/.zsh/miniconda
+source ~/.zsh/docker
 
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash
@@ -75,3 +76,4 @@ export NVM_DIR="$HOME/.nvm"
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
 	zprof
 fi
+
