@@ -42,6 +42,7 @@ source ~/.zsh/starship
 source ~/.zsh/thefuck
 source ~/.zsh/asdf
 source ~/.zsh/docker
+source ~/.zsh/tailscale
 
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash

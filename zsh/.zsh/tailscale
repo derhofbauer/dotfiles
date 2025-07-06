@@ -192,7 +192,12 @@ _tailscale()
     fi
 }
 
+# don't run completion function when tailscale CLI is not installed
+if ! type "tailscale" > /dev/null; then
+  # do nothing
+
+
 # don't run the completion function when being source-ed or eval-ed
-if [ "$funcstack[1]" = "_tailscale" ]; then
+elif [ "$funcstack[1]" = "_tailscale" ]; then
     _tailscale
 fi
