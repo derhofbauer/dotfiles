@@ -10,8 +10,8 @@ font-size = 14
 adjust-cell-height = 35%
 
 # Colors
-theme = catppuccin-mocha
-#theme = light:catppuccin-latte,dark:catppuccin-mocha
+#theme = catppuccin-mocha
+theme = light:material,dark:catppuccin-mocha
 background-opacity = 0.95
 
 # Titlebar & Paddings
