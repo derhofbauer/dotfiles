@@ -39,5 +39,5 @@ vv() {
 
 # Reset the dispalys to the preferred settings and positions
 reset-displays() {
-   displayplacer "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1800x1169 hz:120 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:5B5D1E7D-CE46-4F89-BAD5-2D324CB43ED3 res:2560x1440 hz:60 color_depth:8 enabled:true scaling:off origin:(4360,-271) degree:0" "id:F29DF8AC-34ED-45DE-866D-69C729626821 res:2560x1440 hz:60 color_depth:8 enabled:true scaling:off origin:(1800,-271) degree:0"
+   /usr/bin/env php ./scripts/reset-displays.php
 }
