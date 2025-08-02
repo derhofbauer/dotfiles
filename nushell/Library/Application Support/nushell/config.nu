@@ -45,4 +45,30 @@ export def filter-time-csv-overwrite [
     | save --force $file
 
     print $"Processed CSV saved to ($file)"
+}
+
+export def prepare-time-csvs [
+  file: string # Input CSV file
+] {
+
+  # date format
+  let date = date now | format date "%Y-%m" 
+
+  # Customs that want a timesheet
+  let customers = [DORDA "STEINER's"]
+
+  let data = open $file
+
+  # prepare timesheets
+  $customers | each {|e|
+     $data 
+      | where Project == $e
+      | reject User Email Tags Weekday
+      | to csv
+      | save --force $"($date)_($e).csv"
   }
+
+  # prepare timesheet for WiBS 
+  # TODO: get columns for WiBS, remove Tag "Arbeit", group by Tag and sum the durations
+
+}
