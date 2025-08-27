@@ -68,7 +68,25 @@ export def prepare-time-csvs [
       | save --force $"($date)_($e).csv"
   }
 
+  # TODO: prepare a copy&paste table for Anwert containing all the customers and sums
+
+
   # prepare timesheet for WiBS 
   # TODO: get columns for WiBS, remove Tag "Arbeit", group by Tag and sum the durations
-
+  # TODO: prepare a copy&paste table for all WiBS Categories (ignoring WiBS Workshops)
+  $data
+  | where Project == 'WiBS'
+  | update Tags {|row|
+    split row ',' 
+    | filter {|x| $x != 'Arbeit'}
+    | str join ','
+  }
+  | group-by Tags
+  | each {|group|
+    {
+      tag: $group.key,
+      duration: ($group.values | get Duration | math sum) # FIXME: this does not yet work. I want to calculate the sum of all the durations for each tag here.
+    }
+  }
+  | reject User Email Tags Weekday
 }
