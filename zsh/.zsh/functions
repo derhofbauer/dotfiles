@@ -39,5 +39,5 @@ vv() {
 
 # Reset the dispalys to the preferred settings and positions
 reset-displays() {
-   /usr/bin/env php ./scripts/reset-displays.php
+   /usr/bin/env php ~/.zsh/scripts/reset-displays.php
 }
