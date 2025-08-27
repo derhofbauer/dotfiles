@@ -47,7 +47,6 @@ return {
       "phpmd",
       "phpstan",
       "pint",
-      "prettier",
       --"pretty-php",
       "protolint",
       "rustywind",
