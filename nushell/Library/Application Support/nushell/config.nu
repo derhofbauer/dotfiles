@@ -47,6 +47,17 @@ export def filter-time-csv-overwrite [
     print $"Processed CSV saved to ($file)"
 }
 
+export def filter-time-csv-overwrite-new [
+  file: string # Input/Output CSV file
+] {
+    open $file
+    | reject Weekday Email Tags
+    | to csv
+    | save --force $file
+
+    print $"Processed CSV saved to ($file)"
+}
+
 export def prepare-time-csvs [
   file: string # Input CSV file
 ] {
