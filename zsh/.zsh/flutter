@@ -1,0 +1,6 @@
+# Flutter development
+export PATH="$HOME/development/flutter/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
