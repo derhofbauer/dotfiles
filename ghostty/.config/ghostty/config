@@ -11,7 +11,7 @@ adjust-cell-height = 35%
 
 # Colors
 #theme = catppuccin-mocha
-theme = light:material,dark:catppuccin-mocha
+theme = light:material,dark:Catppuccin Mocha
 background-opacity = 0.95
 
 # Titlebar & Paddings
