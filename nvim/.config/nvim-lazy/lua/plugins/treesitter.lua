@@ -2,10 +2,8 @@ return {
   "nvim-treesitter/nvim-treesitter",
   ---@param opts TSConfig
   config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
-
     ---@class ParserInfo[]
-    local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+    local parser_config = require("nvim-treesitter.parsers")
 
     --- TypoScript parser
     parser_config.typoscript = {
