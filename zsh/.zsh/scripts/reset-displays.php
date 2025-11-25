@@ -82,7 +82,7 @@ final class Screen
  */
 function getExplodedConfig(): array 
 {
-    $currentConfig = `displayplacer list`;
+    $currentConfig = shell_exec('displayplacer list');
     $currentConfigScreens = explode(
         separator: PHP_EOL . PHP_EOL,
         string: $currentConfig
@@ -98,7 +98,7 @@ function getExplodedConfig(): array
  */
 function getScreens(): array
 {
-    $currentConfigScreens =getExplodedConfig();
+    $currentConfigScreens = getExplodedConfig();
 
     $screens = [
         new Screen($currentConfigScreens[0]),
