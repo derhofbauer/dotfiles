@@ -41,3 +41,15 @@ vv() {
 reset-displays() {
    /usr/bin/env php ~/.zsh/scripts/reset-displays.php
 }
+
+# Run `dropbox status` in a watch command, depending on operating system (Debian-based, Arch-based)
+dbw() {
+  if type dropbox; then
+    watch dropbox status
+  fi
+
+  if type dropbox-cli; then
+    watch dropbox-cli status
+  fi
+
+}

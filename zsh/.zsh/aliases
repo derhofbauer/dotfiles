@@ -3,9 +3,9 @@ alias gt="terminal"
 alias gta="alacritty --working-directory=$(pwd) &"
 alias gtk="kitty --working-directory=$(pwd) &"
 
-alias dbw='watch dropbox-cli status'
-alias dbs='dropbox-cli status'
-alias dls='dropbox-cli ls'
+#alias dbw='watch dropbox status' # moved to a function
+alias dbs='dropbox status'
+alias dls='dropbox ls'
 
 alias fucking='sudo '
 alias domd5sum='md5sum * | tee checksum.md5'
