@@ -43,6 +43,7 @@ source ~/.zsh/thefuck
 source ~/.zsh/asdf
 source ~/.zsh/docker
 source ~/.zsh/tailscale
+source ~/.zsh/ruby
 source ~/.zsh/flutter
 
 # do not remove the trailing slash on path
