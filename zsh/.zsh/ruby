@@ -1,2 +1,5 @@
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+# Ruby on MacOS
+if [[ -d "/opt/homebrew/opt/chruby/share/chruby/" ]]; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+fi
