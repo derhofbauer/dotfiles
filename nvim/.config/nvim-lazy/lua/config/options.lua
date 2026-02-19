@@ -7,13 +7,14 @@ vim.opt.cursorcolumn = true
 
 vim.g.lazyvim_picker = "telescope"
 
---vim.treesitter.language.register("blade", "blade")
+vim.treesitter.language.register("blade", "blade")
+vim.treesitter.language.register("typoscript", "typoscript")
 
 vim.filetype.add({
   extension = {
     typoscript = "typoscript",
     tsconfig = "typoscript",
-    --["blade.php"] = "blade",
+    ["blade.php"] = "blade",
   },
   filename = {
     ["setup.txt"] = "typoscript",
