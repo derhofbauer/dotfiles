@@ -35,16 +35,17 @@ PATH=~/.zsh/functions:$PATH
 PATH=~/.local/bin:$PATH
 
 # external tools
-source ~/.zsh/fzf
-source ~/.zsh/ngrok
-source ~/.zsh/zoxide
-source ~/.zsh/starship
-source ~/.zsh/thefuck
+#source ~/.zsh/flutter
 source ~/.zsh/asdf
 source ~/.zsh/docker
-source ~/.zsh/tailscale
+source ~/.zsh/fzf
+source ~/.zsh/ngrok
 source ~/.zsh/ruby
-source ~/.zsh/flutter
+source ~/.zsh/starship
+source ~/.zsh/tailscale
+source ~/.zsh/television
+source ~/.zsh/thefuck
+source ~/.zsh/zoxide
 
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash

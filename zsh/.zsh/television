@@ -1,0 +1,4 @@
+# television
+if command -v tv &>/dev/null; then
+  eval "$(tv init zsh)"
+fi
