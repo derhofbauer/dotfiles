@@ -17,6 +17,8 @@ source ~/.zsh/zstyle
 source ~/.zsh/functions
 
 # vim key bindings 
+export EDITOR=nvim
+export VISUAL=nvim
 zplug "jeffreytse/zsh-vi-mode"
 
 # zsh plugins
