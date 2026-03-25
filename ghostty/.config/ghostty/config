@@ -1,7 +1,8 @@
 # Fonts
 #font-family = CaskaydiaCove Nerd Font
-font-family = FiraCode Nerd Font Mono
+#font-family = FiraCode Nerd Font Mono
 #font-family = JetBrainsMono Nerd Font Mono
+font-family = iA Writer Mono V
 
 # Font size
 font-size = 14
