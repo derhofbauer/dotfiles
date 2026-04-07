@@ -1,3 +1,4 @@
 gui:
   switchTabsWithPanelJumpKeys: true
+git:
   autoForwardBranches: none
