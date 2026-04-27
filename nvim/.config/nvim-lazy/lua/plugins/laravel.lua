@@ -15,4 +15,5 @@ return {
   event = { "VeryLazy" },
   opts = {},
   config = true,
+  enabled = false,
 }

@@ -27,7 +27,5 @@ return {
       },
       filetype = "blade",
     }
-
-    require("nvim-treesitter.configs").setup(opts)
   end,
 }
