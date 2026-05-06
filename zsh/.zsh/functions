@@ -51,5 +51,10 @@ dbw() {
   if type dropbox-cli; then
     watch dropbox-cli status
   fi
+}
 
+# Flush DNS cache
+flush-dns-cache() {
+  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+  # TODO: add commands for other operating systems as well
 }
