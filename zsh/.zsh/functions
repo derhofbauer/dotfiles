@@ -58,3 +58,12 @@ flush-dns-cache() {
   sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
   # TODO: add commands for other operating systems as well
 }
+
+# Zoxide to TMUX
+function zt() {
+  local dir
+
+  dir=$(zoxide query -i "$@") || return
+  local session_name=$(basename "$dir" | tr ' .' '_')
+  tmux new-session -A -s "$session_name" -c "$dir"
+}
