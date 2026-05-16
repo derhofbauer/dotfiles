@@ -67,3 +67,10 @@ function zt() {
   local session_name=$(basename "$dir" | tr ' .' '_')
   tmux new-session -A -s "$session_name" -c "$dir"
 }
+
+# Move all files recursively into the working directory and delete empty folders
+function move-resurively-and-delete-empty() {
+  find . -type f -exec mv {} . \;
+
+  find . -empty -delete
+}
