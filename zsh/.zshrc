@@ -48,6 +48,7 @@ source ~/.zsh/tailscale
 source ~/.zsh/television
 source ~/.zsh/thefuck
 source ~/.zsh/zoxide
+source ~/.zsh/antigravity
 
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash
@@ -82,4 +83,3 @@ export NVM_DIR="$HOME/.nvm"
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
 	zprof
 fi
-
