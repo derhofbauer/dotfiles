@@ -8,3 +8,7 @@ export PATH="$PATH:/Users/alexander/Library/Application Support/JetBrains/Toolbo
 
 # Add global composer-installed binaries
 export PATH="$PATH:$HOME/.composer/vendor/bin";
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/alexander/.local/bin:$PATH"

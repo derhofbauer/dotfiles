@@ -83,3 +83,7 @@ export NVM_DIR="$HOME/.nvm"
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
 	zprof
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/alexander/.local/bin:$PATH"
