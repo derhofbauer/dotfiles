@@ -49,6 +49,7 @@ source ~/.zsh/television
 source ~/.zsh/thefuck
 source ~/.zsh/zoxide
 source ~/.zsh/antigravity
+source ~/.zsh/pnpm
 
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash
@@ -66,14 +67,6 @@ fi
 zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# pnpm
-export PNPM_HOME="/Users/alexander/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
