@@ -26,6 +26,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "bobthecow/git-flow-completion"
+zplug "lukechilds/zsh-nvm"
 
 # Aliases
 [ -f ~/.zsh/aliases ] && source ~/.zsh/aliases
@@ -38,15 +39,15 @@ PATH=~/.local/bin:$PATH
 
 # external tools
 #source ~/.zsh/flutter
-source ~/.zsh/asdf
+#source ~/.zsh/asdf
 source ~/.zsh/docker
 source ~/.zsh/fzf
-source ~/.zsh/ngrok
+#source ~/.zsh/ngrok
 source ~/.zsh/ruby
 source ~/.zsh/starship
 source ~/.zsh/tailscale
-source ~/.zsh/television
-source ~/.zsh/thefuck
+#source ~/.zsh/television
+#source ~/.zsh/thefuck
 source ~/.zsh/zoxide
 source ~/.zsh/antigravity
 source ~/.zsh/pnpm
@@ -63,20 +64,24 @@ if ! zplug check --verbose; then
     fi
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Lazy-load NVM
+# based on https://allandeutsch.com/notes/zsh-startup
+export NVM_DIR="$HOME/.nvm"
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
+export NVM_AUUTO_USE=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
+
 # Then, source plugins and add commands to $PATH
 zplug load
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Get ZSH startup profiling data
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
 	zprof
 fi
-
 
 # Added by Antigravity CLI installer
 export PATH="/Users/alexander/.local/bin:$PATH"
