@@ -1,0 +1,14 @@
+# Zsh plugins managed by antidote
+# https://github.com/mattmc3/antidote
+
+# vim key bindings
+jeffreytse/zsh-vi-mode
+
+# zsh plugins
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
+bobthecow/git-flow-completion
+
+# nvm - node version manager
+lukechilds/zsh-nvm

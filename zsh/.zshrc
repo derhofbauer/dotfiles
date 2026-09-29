@@ -3,9 +3,16 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
   zmodload zsh/zprof
 fi
 
-
-# Load zplug package manager
-source ~/.zplug/init.zsh
+# Load antidote package manager
+zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
+antidote_zsh_path=$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+if [[ ! $antidote_zsh_path -nt ${zsh_plugins}.txt ]]; then
+  (
+    source $antidote_zsh_path
+    antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
+  )
+fi
+source ${zsh_plugins}.zsh
 
 # load custom config files
 source ~/.zsh/history
@@ -19,14 +26,6 @@ source ~/.zsh/functions
 # vim key bindings 
 export EDITOR=nvim
 export VISUAL=nvim
-zplug "jeffreytse/zsh-vi-mode"
-
-# zsh plugins
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "bobthecow/git-flow-completion"
-zplug "lukechilds/zsh-nvm"
 
 # Aliases
 [ -f ~/.zsh/aliases ] && source ~/.zsh/aliases
@@ -55,15 +54,6 @@ source ~/.zsh/pnpm
 # do not remove the trailing slash on path
 setopt no_auto_remove_slash
 
-# run zplug stuff
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Lazy-load NVM
@@ -73,9 +63,6 @@ export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
 export NVM_AUUTO_USE=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
-
-# Then, source plugins and add commands to $PATH
-zplug load
 
 
 # Get ZSH startup profiling data
