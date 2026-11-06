@@ -8,7 +8,12 @@ source ~/.zsh/emudhra-certificate-fix
 
 # Load antidote package manager
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
-antidote_zsh_path=$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+if [[ $(uname) == "Darwin" ]]; then
+  antidote_zsh_path=$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+else
+  antidote_zsh_path=${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
+fi
+
 if [[ ! $antidote_zsh_path -nt ${zsh_plugins}.txt ]]; then
   (
     source $antidote_zsh_path
