@@ -1,0 +1,7 @@
+if [[ $(uname) == "Darwin" ]]; then
+  #
+  # For MacOS use the Mozilla provided CA Certificates bundle from Homebrew
+  #
+  export SSL_CERT_FILE="$(brew --prefix ca-certificates)/share/ca-certificates/cacert.pem"
+  export CURL_CA_BUNDLE="$SSL_CERT_FILE"
+fi

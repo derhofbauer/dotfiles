@@ -3,6 +3,9 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
   zmodload zsh/zprof
 fi
 
+# eMudhra certificate fix
+source ~/.zsh/emudhra-certificate-fix
+
 # Load antidote package manager
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
 antidote_zsh_path=$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
