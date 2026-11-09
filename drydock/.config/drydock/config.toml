@@ -1,0 +1,3 @@
+roots = ["~/repos"]
+
+follow_symlinks = true
